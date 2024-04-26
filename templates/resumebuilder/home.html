@@ -1,0 +1,173 @@
+{% extends "layout/base.html" %}
+{% load static %}
+
+
+{% block css %}
+<style>
+    body {
+        background-color: white;
+        color: white;
+        max-width: 1500px;
+    }
+</style>
+{% endblock css %}
+
+
+{% block body %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Resume Builder</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <link rel="stylesheet" href="{% static '/CSS/homestyle.css' %}">
+</head>
+
+<body>
+    <!-- Section-1 HTML START -->
+    <section class="p-4 p-md-5 mb-4">
+        <div class="row">
+            <div class="header1 col-md-6">
+                <h1>IMPRESSIVE RESUMES</h1>
+                <h2>EASY ONLINE BUILDER</h2>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Dolores laborum non ullam officiis quibusdam natus, dicta eaque
+                    illo nobis voluptatibus
+                    asperiores maxime neque iste porro?
+                </p>
+                <p><a class="btn" href="{% url 'resume_templates' %}">START MY RESUME</a></p>
+            </div>
+            <div class="headerimg col-md-6">
+                <img class="bd-placeholder-img rounded-circle" src="{% static '/images/headerimg.png' %}"
+                    alt="Resume Image" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-2 HTML START -->
+    <section class="container">
+        <h2>
+            3 EASY STEPS TO CREATE YOUR PERFECT <br />
+            RESUME
+        </h2>
+        <div class="choose-templates">
+            <div class="steps col-md-4">
+                <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 1 Image" />
+                <h3 class="heading-h3">
+                    CHOOSE YOUR RESUME TEMPLATE
+                </h3>
+                <p class="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p><a class="btn" href="{% url 'resume_templates' %}">CHOOSE TEMPLATES</a></p>
+            </div>
+            <!-- Repeat the above code for remaining steps -->
+            <div class="steps col-md-4 text-center">
+                <img src="{% static '/images/customizeresume.jpg' %}" alt="Step 2 Image" />
+                <h3 class="heading-h3">
+                    CUSTOMIZE YOUR RESUME
+                </h3>
+                <p class="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p><a class="btn" href="{% url 'resume' %}">EDIT RESUMES</a></p>
+            </div>
+            <div class="steps col-md-4 text-center">
+                <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 3 Image" />
+                <h3 class="heading-h3">
+                    DOWNLOAD OR PRINT
+                </h3>
+                <p class="">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                </p>
+                <p><a class="btn" href="{% url 'resumetemplatedownload' %}">DOWNLOAD RESUME</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-3 HTML START -->
+    <section>
+        <div class="buildresume text-center">
+            <h2>PROFESSIONAL RESUME TEMPLATES</h2>
+            <p class="font-italic">
+                CHOOSE FROM 15+ TAILORED TEMPLATES THAT HAVE LANDED THOUSANDS
+                OF PEOPLE LIKE <br />
+                YOU THE JOBS THEY WERE DREAMING OF.
+            </p>
+        </div>
+    </section>
+
+    <!-- Section-4 HTML START -->
+    <section class="search_resume_templates">
+        <img src="{% static '/images/searchresume.png' %}" alt="Search CV Image" />
+        <h2>HOW TO MAKE A RESUME</h2>
+        <p>BUILD A CAPTIVATING RESUME IN MINUTES!</p>
+        <div class="options">
+            <p>1️⃣ Select your favorite templates.</p>
+            <p>2️⃣ Add your contact information.</p>
+            <p>3️⃣ Fill out your work history and eductions.</p>
+            <p>4️⃣ Select from our hundreds of job descriptions and skill examples, or input your own.</p>
+            <p>5️⃣ Review your resume & download it.</p>
+        </div>
+        <p><a class="btn" href="#">START MY RESUME</a></p>
+    </section>
+
+    <!-- Section-5 HTML START -->
+    <section class="about-us" id="about-us">
+        <h1>THE RAGE IS ALL ABOUT US</h1>
+        <p>HERE'S WHAT PEOPLE ARE SAYING</p>
+        <div class="rating">
+            <h1>⭐⭐⭐⭐⭐</h1>
+            <h2>Vansh Srivastav</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
+                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
+                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
+                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
+                velit.
+            </p>
+        </div>
+        <div class="rating">
+            <h1>⭐⭐⭐⭐⭐</h1>
+            <h2>Vansh Srivastav</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
+                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
+                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
+                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
+                velit.
+            </p>
+        </div>
+        <div class="rating">
+            <h1>⭐⭐⭐⭐⭐</h1>
+            <h2>Vansh Srivastav</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
+                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
+                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
+                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
+                velit.
+            </p>
+        </div>
+        <div class="rating">
+            <h1>⭐⭐⭐⭐⭐</h1>
+            <h2>Vansh Srivastav</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
+                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
+                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
+                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
+                velit.
+            </p>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
+{% endblock body %}
