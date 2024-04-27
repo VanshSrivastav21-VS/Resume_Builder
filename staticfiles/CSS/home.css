@@ -4,7 +4,11 @@ body {
 
 html {
     scroll-behavior: smooth;
-  }
+}
+h1,h2{
+    font-family: century;
+    font-weight: 700;
+}
 
 /**Section-1 CSS Start**/
 .row {
@@ -16,13 +20,11 @@ html {
 
 .header1 h1 {
     font-size: 54px;
-    font-weight: 700;
     color: rgb(15, 157, 182);
 }
 
 .header1 h2 {
     font-size: 54px;
-    font-weight: 700;
 }
 
 .header1 p {
@@ -33,14 +35,13 @@ html {
 }
 
 .header1 .btn {
-    color: black;
+    color: white;
     font-weight: bold;
     background-color: rgb(15, 157, 182);
     text-align: center;
     padding: 16px;
     cursor: pointer;
     transition: all 0.5s;
-
 }
 
 .header1 .btn:hover {
@@ -61,7 +62,6 @@ html {
     transform: scale(0.8);
     transition: 1s ease;
 }
-
 /**Section-1 CSS End**/
 
 /**Section-2 CSS Start**/
@@ -74,13 +74,11 @@ html {
 
 .header2 h1 {
     font-size: 46px;
-    font-weight: 700;
     color: rgb(15, 157, 182);
 }
 
 .header2 h2 {
     font-size: 46px;
-    font-weight: 700;
 }
 
 .header2 p {
@@ -91,7 +89,7 @@ html {
 }
 
 .header2 .btn {
-    color: black;
+    color: white;
     font-weight: bold;
     background-color: rgb(15, 157, 182);
     text-align: center;
@@ -137,14 +135,12 @@ html {
 
 .header3 h1 {
     font-size: 46px;
-    font-weight: 700;
     padding-top: 2rem;
     color: black;
 }
 
 .header3 h2 {
     font-size: 46px;
-    font-weight: 700;
 }
 
 .header3 p {
@@ -155,7 +151,7 @@ html {
 }
 
 .header3 .btn {
-    color: black;
+    color: white;
     font-weight: bold;
     background-color: rgb(15, 157, 182);
     text-align: center;
@@ -182,68 +178,74 @@ html {
     color: white;
 }
 
-
 .pic-ctn {
     width: 100vw;
     height: 200px;
-  }
-  
-  @keyframes display {
+}
+
+@keyframes display {
     0% {
-      transform: translateX(100px);
-      opacity: 0;
+        transform: translateX(100px);
+        opacity: 0;
     }
+
     10% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
+
     20% {
-      transform: translateX(0);
-      opacity: 1;
+        transform: translateX(0);
+        opacity: 1;
     }
+
     30% {
-      transform: translateX(0);
-      opacity: 0;
+        transform: translateX(0);
+        opacity: 0;
     }
+
     40% {
-      transform: translateX(0);
-      opacity: 0;
+        transform: translateX(0);
+        opacity: 0;
     }
-  }
-  
-  .pic-ctn {
+}
+
+.pic-ctn {
     position: relative;
     width: 100vw;
     height: 300px;
     margin-top: 15vh;
     margin-bottom: 25vh;
-  }
+}
 
-  .pic-ctn img{
+.pic-ctn img {
     max-width: 50%;
-  }
-  
-  
-  .pic-ctn > img {
+}
+
+.pic-ctn>img {
     position: absolute;
     top: 0;
     left: calc(50% - 100px);
     opacity: 0;
     animation: display 20s infinite;
-  }
-  
-  img:nth-child(2) {
+}
+
+img:nth-child(2) {
     animation-delay: 2s;
-  }
-  img:nth-child(3) {
+}
+
+img:nth-child(3) {
     animation-delay: 4s;
-  }
-  img:nth-child(4) {
+}
+
+img:nth-child(4) {
     animation-delay: 6s;
-  }
-  img:nth-child(5) {
+}
+
+img:nth-child(5) {
     animation-delay: 8s;
-  }
+}
+
 /**Section-3 CSS End**/
 
 /**Section-4 CSS Start**/
@@ -270,6 +272,8 @@ h2 {
     background-color: #f9f9f9;
     color: black;
     border-radius: 8px;
+    border: 0 2px 10px rgb(15, 157, 182);
+    box-shadow: 0 0 10px 5px rgb(15, 157, 182);
 }
 
 .steps img {
@@ -287,7 +291,7 @@ p {
 }
 
 .choose-templates .steps .btn {
-    color: black;
+    color: white;
     font-weight: bold;
     background-color: rgb(15, 157, 182);
     text-align: center;
@@ -323,7 +327,7 @@ p {
 }
 
 .search_resume_templates .btn {
-    color: black;
+    color: white;
     font-weight: bold;
     background-color: rgb(15, 157, 182);
     text-align: center;
@@ -348,12 +352,10 @@ p {
 
 .about-us h1 {
     font-size: 46px;
-    font-weight: 700;
 }
 
 .about-us h2 {
     font-size: 46px;
-    font-weight: 700;
 }
 
 .about-us p {
@@ -364,7 +366,7 @@ p {
 }
 
 .about-us .btn {
-    color: black;
+    color: white;
     font-weight: bold;
     background-color: rgb(15, 157, 182);
     text-align: center;

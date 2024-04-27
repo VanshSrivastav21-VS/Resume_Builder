@@ -1,5 +1,23 @@
 {% load static %}
 
+
+{% block css %}
+  <style>
+    .navbar{
+      font-family: sans-serif;
+      font-weight: bold;
+    }
+
+    .navbar .collapse ul li a{
+      color: white;
+      padding-left: 1rem;
+      text-decoration: none;
+    }
+  
+  </style>
+{% endblock css %}
+  
+
   
 
 {% block body %}
@@ -21,11 +39,11 @@
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-          <li><a href="{% url 'home' %}" class="nav-link px-2 text-white">Home</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Features</a></li>
-          <li><a href="{% url 'resume_templates' %}" class="nav-link px-2 text-white">Resumes</a></li>
-          <li><a href="#about-us" class="nav-link px-2 text-white">About</a></li>
-          <li><a href="#" class="nav-link px-2 text-white">Contact</a></li>
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="{% url 'resume_templates' %}">Resumes</a></li>
+          <li><a href="#about-us">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
           <li><a href="{% url 'resume' %}"></a></li>
         </ul>
         {% if user.is_authenticated %}
