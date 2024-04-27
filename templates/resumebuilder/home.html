@@ -1,18 +1,6 @@
 {% extends "layout/base.html" %}
 {% load static %}
 
-
-{% block css %}
-<style>
-    body {
-        background-color: white;
-        color: white;
-        max-width: 1500px;
-    }
-</style>
-{% endblock css %}
-
-
 {% block body %}
 <!doctype html>
 <html lang="en">
@@ -27,7 +15,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="{% static '/CSS/homestyle.css' %}">
+    <link rel="stylesheet" href="{% static '/CSS/home.css' %}">
+
 </head>
 
 <body>
@@ -35,15 +24,14 @@
     <section class="p-4 p-md-5 mb-4">
         <div class="row">
             <div class="header1 col-md-6">
-                <h1>IMPRESSIVE RESUMES</h1>
-                <h2>EASY ONLINE BUILDER</h2>
+                <h1>The Ultimate</h1>
+                <h2>Resume Builder</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                    Dolores laborum non ullam officiis quibusdam natus, dicta eaque
-                    illo nobis voluptatibus
-                    asperiores maxime neque iste porro?
+                    Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and easy
+                    to use, with a range of amazing functions. Custom-tailor resumes for any job within minutes.
+                    Increase your interview chances and rise above the competition.
                 </p>
-                <p><a class="btn" href="{% url 'resume_templates' %}">START MY RESUME</a></p>
+                <p><a class="btn" href="{% url 'resume_templates' %}">Try for Free</a></p>
             </div>
             <div class="headerimg col-md-6">
                 <img class="bd-placeholder-img rounded-circle" src="{% static '/images/headerimg.png' %}"
@@ -53,6 +41,53 @@
     </section>
 
     <!-- Section-2 HTML START -->
+    <section class="p-4 p-md-5 mb-4">
+        <div class="row2">
+            <div class="buildimg col-md-6">
+                <img class="bd-placeholder-img" src="{% static '/images/image.png' %}" alt="Resume Image" />
+            </div>
+            <div class="header2 col-md-6">
+                <h1>Create a resume to</h1>
+                <h2>land your next job</h2>
+                <p>
+                    We have developed a <a style="text-decoration: none;" href="#">resume builder</a> based on feedback
+                    from thousands of users, recruiter expertise,
+                    stellar template design and the best hiring practices. The goal is simple: help you land that dream
+                    job interview! Get an advantage in the modern professional environment.
+                </p>
+                <p><a class="btn" href="{% url 'resume_templates' %}">Build Your Resume</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-3 HTML START -->
+    <section class="p-4 p-md-5 mb-4">
+        <div class="container3">
+            <div class="header3 col-md-6">
+                <h1>Proven resume</h1>
+                <h2>templates</h2>
+                <p>
+                    The resume templates included in our resume builder have been approved by seasoned recruiters.
+                    Capturing the recruiters’ attention is the first step towards getting hired.
+                </p>
+                <p><a class="btn" href="{% url 'resume_templates' %}">Select Templates</a></p>
+                <div class="resume_rating_star">
+                    <h3>⭐⭐⭐⭐⭐</h3>
+                    <span>4.5 out of 5</span>
+                    <p>based on 49,984 reviews on Trustpilot</p>
+                </div>
+            </div>
+            <div class="pic-ctn">
+                <img src="{% static '/images/template1.png' %}" alt="" class="pic">
+                <img src="{% static '/images/template2.png' %}" alt="" class="pic">
+                <img src="{% static '/images/template3.jpg' %}" alt="" class="pic">
+                <img src="{% static '/images/template4.png' %}" alt="" class="pic">
+                <img src="{% static '/images/template5.png' %}" alt="" class="pic">
+            </div>
+        </div>
+    </section>
+
+    <!-- Section-4 HTML START -->
     <section class="container">
         <h2>
             3 EASY STEPS TO CREATE YOUR PERFECT <br />
@@ -88,12 +123,12 @@
                 <p class="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 </p>
-                <p><a class="btn" href="{% url 'resumetemplatedownload' %}">DOWNLOAD RESUME</a></p>
+                <p><a class="btn" href="{% url 'resumetemplatedownload' %}">DOWNLOAD TEMPLATE</a></p>
             </div>
         </div>
     </section>
 
-    <!-- Section-3 HTML START -->
+    <!-- Section-5 HTML START -->
     <section>
         <div class="buildresume text-center">
             <h2>PROFESSIONAL RESUME TEMPLATES</h2>
@@ -105,7 +140,7 @@
         </div>
     </section>
 
-    <!-- Section-4 HTML START -->
+    <!-- Section-6 HTML START -->
     <section class="search_resume_templates">
         <img src="{% static '/images/searchresume.png' %}" alt="Search CV Image" />
         <h2>HOW TO MAKE A RESUME</h2>
@@ -117,53 +152,18 @@
             <p>4️⃣ Select from our hundreds of job descriptions and skill examples, or input your own.</p>
             <p>5️⃣ Review your resume & download it.</p>
         </div>
-        <p><a class="btn" href="#">START MY RESUME</a></p>
+        <p><a class="btn" href="#">Build Your Resume</a></p>
     </section>
 
-    <!-- Section-5 HTML START -->
+    <!-- Section-7 HTML START -->
     <section class="about-us" id="about-us">
-        <h1>THE RAGE IS ALL ABOUT US</h1>
-        <p>HERE'S WHAT PEOPLE ARE SAYING</p>
-        <div class="rating">
-            <h1>⭐⭐⭐⭐⭐</h1>
-            <h2>Vansh Srivastav</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
-                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
-                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
-                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
-                velit.
-            </p>
-        </div>
-        <div class="rating">
-            <h1>⭐⭐⭐⭐⭐</h1>
-            <h2>Vansh Srivastav</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
-                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
-                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
-                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
-                velit.
-            </p>
-        </div>
-        <div class="rating">
-            <h1>⭐⭐⭐⭐⭐</h1>
-            <h2>Vansh Srivastav</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
-                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
-                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
-                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
-                velit.
-            </p>
-        </div>
-        <div class="rating">
-            <h1>⭐⭐⭐⭐⭐</h1>
-            <h2>Vansh Srivastav</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae maiores excepturi voluptatem libero
-                perspiciatis quasi aliquid optio necessitatibus voluptate! Fuga distinctio odit minima reiciendis ipsa
-                sapiente, asperiores debitis, repellat rerum, quae aperiam dolorem corrupti! Possimus, quo rerum?
-                Recusandae eum voluptatibus nesciunt magnam voluptate repellendus fugit soluta! Sed reprehenderit neque
-                velit.
-            </p>
-        </div>
+        <h1>Why our customers love</h1>
+        <h2>our resume builder</h2>
+        <p>Resume.io’s online builder tool and collection of elegant, recruiter-tested templates are used by more than
+            10 million people around the globe! We are incredibly proud to empower so many active professionals.
+        </p>
+        <p><a class="btn" href="{% url 'resume_templates' %}">Select Templates</a></p>
+
     </section>
 
 

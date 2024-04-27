@@ -1,8 +1,5 @@
-from django.shortcuts import render, redirect
-from .models import ContactForm, ResumeTemplate
-from django.contrib import messages
-from django.http import HttpResponseRedirect
-from django.urls import reverse
+from django.shortcuts import render
+from .models import ResumeTemplate
 from django.contrib.auth.decorators import login_required
 
 @login_required
@@ -91,42 +88,4 @@ def resumetemplatedownload(request):
 @login_required
 def about(request):
     return render(request, 'resumebuilder/about.html')
-
-@login_required
-def contact(request):
-    if request.method == 'POST':
-        # Process form submission
-        # You can access form data using request.POST
-        # For example:
-        name = request.POST.get('name')
-        email = request.POST.get('email')
-        message = request.POST.get('message')
-
-        # Save the form data to the database or perform any other necessary actions
-
-        # Example of saving the form data to a ContactForm model
-        ContactForm.objects.create(name=name, email=email, message=message)
-
-        # Display a success message
-        messages.success(request, 'Your message has been sent successfully!')
-        
-        # Redirect to the contact page again or to a thank you page
-        return redirect('contact')
-
-    # If the request method is GET, render the contact page template
-    return render(request, 'contact.html')
-
-@login_required
-def submit_contact(request):
-    if request.method == 'POST':
-        # Process the form data
-        # Example: Saving the form data to the database
-        
-        # Redirect to a success page
-        return HttpResponseRedirect(reverse('home'))
-    else:
-        # Handle GET requests or other cases
-        # Example: Render a form template
-        return render(request, 'contact_form.html', contact)
-
 

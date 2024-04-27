@@ -14,8 +14,16 @@
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
     <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
-    {% block css %}
 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    {% block css %}
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
     {% endblock css %}
 
 </head>
@@ -32,7 +40,7 @@
 
     </main>
     <footer>
-        {% include 'components/footer.html' %}   
+        {% include 'components/footer.html' %}
     </footer>
 
     <!-- Bootstrap JavaScript Libraries -->

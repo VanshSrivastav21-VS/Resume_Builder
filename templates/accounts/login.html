@@ -1,9 +1,6 @@
-{% extends 'layout/base.html' %}
 {% load static %}
 
-
 {% block body %}
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,28 +9,38 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login</title>
   <style>
+    body {
+      background-color: #1b1b1b;
+      font-family: sans-serif;
+    }
+
     .container {
-      max-width: 400px;
+      max-width: 380px;
       margin-top: 6rem;
+      margin-left: 30rem;
       border-radius: 10px;
       background-color: white;
       color: black;
-      box-shadow: 0 0 20px #ffc107
+      box-shadow: 0 0 20px rgb(15, 157, 182);
     }
 
     h1 {
       text-align: center;
+      padding-top: 2rem;
       margin-bottom: 20px;
-      color: #5ca1e1;
+      color: black;
     }
 
     .form-group {
       margin-bottom: 20px;
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
     }
 
     label {
       display: block;
       font-weight: bold;
+      color: #3d3d3d;
     }
 
     input[type="text"],
@@ -46,26 +53,32 @@
     }
 
     button[type="submit"] {
-      width: 100%;
+      width: 89%;
       padding: 10px;
-      background-color: #5ca1e1;
+      background-color: rgb(15, 157, 182);
       color: black;
       font-weight: bold;
       border: none;
       border-radius: 3px;
       margin-bottom: 1rem;
+      margin-left: 1.5rem;
       cursor: pointer;
       transition: background-color 0.3s;
     }
 
     button[type="submit"]:hover {
-      background-color: #ffc107
+      background-color: rgb(15, 157, 182);
     }
 
-    .container .allready-account{
-            color: black;
-            padding-bottom: 1rem;
-        }
+    .container .allready-account {
+      color: black;
+      padding-bottom: 1rem;
+      padding-left: 1.5rem;
+    }
+
+    .container .allready-account p a {
+      color: blue;
+    }
   </style>
 </head>
 
@@ -85,8 +98,8 @@
       <button type="submit">Login</button>
     </form>
     <div class="allready-account">
-      <p> Create your account <a href="{% url 'register' %}">Sign-up</a></p>
-   </div>
+      <p> Don't have an account yet? <a href="{% url 'register' %}">Create Account</a></p>
+    </div>
   </div>
 </body>
 

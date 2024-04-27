@@ -9,21 +9,20 @@ def register_view(request):
         password1 = request.POST['password1']
         password2 = request.POST['password2']
         email = request.POST['email']
-      
 
         if password1 != password2:
             messages.error(request, "Passwords do not match")
-            return redirect('register')  # Redirect back to signup page
+            return redirect('signup')  # Redirect back to signup page
 
         # Check if username is already taken
         if User.objects.filter(username=username).exists():
             messages.error(request, "Username is already taken")
-            return redirect('register')  # Redirect back to signup page
+            return redirect('signup')  # Redirect back to signup page
 
         # Check if email is already registered
         if User.objects.filter(email=email).exists():
             messages.error(request, "Email is already registered")
-            return redirect('register')  # Redirect back to signup page
+            return redirect('signup')  # Redirect back to signup page
 
         # Create the new user
         user = User.objects.create_user(username=username, password=password1, email=email)
@@ -32,7 +31,7 @@ def register_view(request):
         messages.success(request, "Account created successfully. You can now login.")
         return redirect('login')  # Redirect to login page after successful signup
 
-    return render(request, 'accounts/login.html')
+    return render(request, 'accounts/register.html')
     
 def login_view(request):
     if request.method == 'POST':

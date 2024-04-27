@@ -1,0 +1,382 @@
+body {
+    max-width: 1500px;
+}
+
+html {
+    scroll-behavior: smooth;
+  }
+
+/**Section-1 CSS Start**/
+.row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+}
+
+.header1 h1 {
+    font-size: 54px;
+    font-weight: 700;
+    color: rgb(15, 157, 182);
+}
+
+.header1 h2 {
+    font-size: 54px;
+    font-weight: 700;
+}
+
+.header1 p {
+    font-size: 22px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    color: darkgray;
+}
+
+.header1 .btn {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.header1 .btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.headerimg img {
+    width: 100%;
+    border: 0 2px 10px rgb(15, 157, 182);
+    box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+    transition: 1s ease;
+}
+
+.headerimg img:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+}
+
+/**Section-1 CSS End**/
+
+/**Section-2 CSS Start**/
+.row2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+}
+
+.header2 h1 {
+    font-size: 46px;
+    font-weight: 700;
+    color: rgb(15, 157, 182);
+}
+
+.header2 h2 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.header2 p {
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    color: darkgray;
+}
+
+.header2 .btn {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.header2 .btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.buildimg img {
+    width: 90%;
+    border: 0 2px 10px rgb(15, 157, 182);
+    box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+    transition: 1s ease;
+}
+
+.buildimg img:hover {
+    -webkit-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    transform: scale(0.8);
+    transition: 1s ease;
+}
+
+/**Section-2 CSS End**/
+
+/**Section-3 CSS Start**/
+.container3 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5rem;
+    background-color: rgb(29, 51, 54);
+    border: 0 2px 10px rgb(15, 157, 182);
+    box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+}
+
+.header3 h1 {
+    font-size: 46px;
+    font-weight: 700;
+    padding-top: 2rem;
+    color: black;
+}
+
+.header3 h2 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.header3 p {
+    font-size: 19px;
+    line-height: 28px;
+    margin-bottom: 24px;
+    color: darkgray;
+}
+
+.header3 .btn {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.header3 .btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+.header3 .resume_rating_star {
+    padding-top: 3rem;
+}
+
+.header3 .resume_rating_star span {
+    font-size: 19px;
+}
+
+.header3 .resume_rating_star p {
+    font-size: 14px;
+    color: white;
+}
+
+
+.pic-ctn {
+    width: 100vw;
+    height: 200px;
+  }
+  
+  @keyframes display {
+    0% {
+      transform: translateX(100px);
+      opacity: 0;
+    }
+    10% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    20% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    30% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+    40% {
+      transform: translateX(0);
+      opacity: 0;
+    }
+  }
+  
+  .pic-ctn {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+    margin-top: 15vh;
+    margin-bottom: 25vh;
+  }
+
+  .pic-ctn img{
+    max-width: 50%;
+  }
+  
+  
+  .pic-ctn > img {
+    position: absolute;
+    top: 0;
+    left: calc(50% - 100px);
+    opacity: 0;
+    animation: display 20s infinite;
+  }
+  
+  img:nth-child(2) {
+    animation-delay: 2s;
+  }
+  img:nth-child(3) {
+    animation-delay: 4s;
+  }
+  img:nth-child(4) {
+    animation-delay: 6s;
+  }
+  img:nth-child(5) {
+    animation-delay: 8s;
+  }
+/**Section-3 CSS End**/
+
+/**Section-4 CSS Start**/
+.container {
+    padding: 50px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 30px;
+}
+
+.choose-templates {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+.steps {
+    margin-bottom: 30px;
+    padding: 20px;
+    margin-left: 2rem;
+    background-color: #f9f9f9;
+    color: black;
+    border-radius: 8px;
+}
+
+.steps img {
+    max-width: 100px;
+    margin-bottom: 20px;
+}
+
+.heading-h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 16px;
+}
+
+.choose-templates .steps .btn {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.choose-templates .steps .btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+/**Section-4 CSS End**/
+
+/**Section-6 CSS Start**/
+.search_resume_templates {
+    padding: 50px;
+    text-align: center;
+}
+
+.search_resume_templates h2 {
+    margin-top: 2rem;
+}
+
+.search_resume_templates .options {
+    margin-left: 38%;
+}
+
+.search_resume_templates .options p {
+    text-align: left;
+}
+
+.search_resume_templates .btn {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.search_resume_templates .btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+/**Section-6 CSS End**/
+
+/**Section-7 CSS Start**/
+.about-us {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.about-us h1 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.about-us h2 {
+    font-size: 46px;
+    font-weight: 700;
+}
+
+.about-us p {
+    font-size: 19px;
+    line-height: 1.5;
+    padding-left: 23rem;
+    padding-right: 23rem;
+}
+
+.about-us .btn {
+    color: black;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 16px;
+    cursor: pointer;
+    transition: all 0.5s;
+
+}
+
+.about-us .btn:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+}
+
+/**Section-7 CSS End**/
