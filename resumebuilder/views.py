@@ -89,3 +89,5 @@ def resumetemplatedownload(request):
 def about(request):
     return render(request, 'resumebuilder/about.html')
 
+
+

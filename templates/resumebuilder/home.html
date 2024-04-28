@@ -1,6 +1,398 @@
 {% extends "layout/base.html" %}
 {% load static %}
 
+{% block css %}
+<style>
+    body {
+        max-width: 1500px;
+    }
+
+    html {
+        scroll-behavior: smooth;
+    }
+
+    h1,
+    h2 {
+        font-family: century;
+        font-weight: 700;
+    }
+
+    /**Section-1 CSS Start**/
+    .row {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5rem;
+    }
+
+    .header1 h1 {
+        font-size: 54px;
+        color: rgb(15, 157, 182);
+    }
+
+    .header1 h2 {
+        font-size: 54px;
+    }
+
+    .header1 p {
+        font-size: 22px;
+        line-height: 28px;
+        margin-bottom: 24px;
+        color: darkgray;
+    }
+
+    .header1 .btn {
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .header1 .btn:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+    .headerimg img {
+        width: 100%;
+        border: 0 2px 10px rgb(15, 157, 182);
+        box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+        transition: 1s ease;
+    }
+
+    .headerimg img:hover {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        transition: 1s ease;
+    }
+
+    /**Section-1 CSS End**/
+
+    /**Section-2 CSS Start**/
+    .row2 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5rem;
+    }
+
+    .header2 h1 {
+        font-size: 46px;
+        color: rgb(15, 157, 182);
+    }
+
+    .header2 h2 {
+        font-size: 46px;
+    }
+
+    .header2 p {
+        font-size: 19px;
+        line-height: 28px;
+        margin-bottom: 24px;
+        color: darkgray;
+    }
+
+    .header2 .btn {
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+    }
+
+    .header2 .btn:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+    .buildimg img {
+        width: 90%;
+        border: 0 2px 10px rgb(15, 157, 182);
+        box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+        transition: 1s ease;
+    }
+
+    .buildimg img:hover {
+        -webkit-transform: scale(0.8);
+        -ms-transform: scale(0.8);
+        transform: scale(0.8);
+        transition: 1s ease;
+    }
+
+    /**Section-2 CSS End**/
+
+    /**Section-3 CSS Start**/
+    .container3 {
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-left: 5rem;
+        background-color: rgb(29, 51, 54);
+        border: 0 2px 10px rgb(15, 157, 182);
+        box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+    }
+
+    .header3 h1 {
+        font-size: 46px;
+        padding-top: 2rem;
+        color: black;
+    }
+
+    .header3 h2 {
+        font-size: 46px;
+    }
+
+    .header3 p {
+        font-size: 19px;
+        line-height: 28px;
+        margin-bottom: 24px;
+        color: darkgray;
+    }
+
+    .header3 .btn {
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .header3 .btn:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+    .header3 .resume_rating_star {
+        padding-top: 3rem;
+    }
+
+    .header3 .resume_rating_star span {
+        font-size: 19px;
+    }
+
+    .header3 .resume_rating_star p {
+        font-size: 14px;
+        color: white;
+    }
+
+    .pic-ctn {
+        width: 100vw;
+        height: 200px;
+    }
+
+    @keyframes display {
+        0% {
+            transform: translateX(100px);
+            opacity: 0;
+        }
+
+        10% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        20% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+
+        30% {
+            transform: translateX(0);
+            opacity: 0;
+        }
+
+        40% {
+            transform: translateX(0);
+            opacity: 0;
+        }
+    }
+
+    .pic-ctn {
+        position: relative;
+        width: 100vw;
+        height: 300px;
+        margin-top: 15vh;
+        margin-bottom: 25vh;
+    }
+
+    .pic-ctn img {
+        max-width: 50%;
+    }
+
+    .pic-ctn>img {
+        position: absolute;
+        top: 0;
+        left: calc(50% - 100px);
+        opacity: 0;
+        animation: display 20s infinite;
+    }
+
+    img:nth-child(2) {
+        animation-delay: 2s;
+    }
+
+    img:nth-child(3) {
+        animation-delay: 4s;
+    }
+
+    img:nth-child(4) {
+        animation-delay: 6s;
+    }
+
+    img:nth-child(5) {
+        animation-delay: 8s;
+    }
+
+    /**Section-3 CSS End**/
+
+    /**Section-4 CSS Start**/
+    .search_resume_templates {
+        /* padding: 50px; */
+        text-align: center;
+    }
+
+    .search_resume_templates h2 {
+        margin-top: 2rem;
+    }
+
+    .search_resume_templates .options {
+        margin-left: 38%;
+    }
+
+    .search_resume_templates .options p {
+        text-align: left;
+    }
+
+    .search_resume_templates .btn {
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .search_resume_templates .btn:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+    /**Section-4 CSS End**/
+
+    /**Section-6 CSS Start**/
+    .container {
+        /* padding: 50px; */
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 28px;
+        padding-bottom: 2rem;
+    }
+
+    .choose-templates {
+        display: flex;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .steps {
+        margin-bottom: 30px;
+        padding: 20px;
+        margin-left: 2rem;
+        background-color: #f9f9f9;
+        color: black;
+        border-radius: 8px;
+        border: 0 2px 10px rgb(15, 157, 182);
+        box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+    }
+
+    .steps img {
+        max-width: 100px;
+        margin-bottom: 20px;
+    }
+
+    .heading-h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .choose-templates .steps .btn {
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 16px;
+        cursor: pointer;
+        transition: all 0.5s;
+
+    }
+
+    .choose-templates .steps .btn:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+    /**Section-6 CSS End**/
+
+
+    /**Section-7 CSS Start**/
+    .about-us {
+        text-align: center;
+    }
+
+    .about-us h1 {
+        font-size: 46px;
+    }
+
+    .about-us h2 {
+        font-size: 46px;
+    }
+
+    .about-us p {
+        font-size: 19px;
+        line-height: 1.5;
+        padding-left: 23rem;
+        padding-right: 23rem;
+    }
+
+    .about-us .btn {
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 16px;
+        /* margin-bottom: 1.5rem; */
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .about-us .btn:hover {
+        padding-right: 24px;
+        padding-left: 8px;
+    }
+
+    /**Section-7 CSS End**/
+</style>
+{% endblock css %}
+
+
 {% block body %}
 <!doctype html>
 <html lang="en">
@@ -89,6 +481,33 @@
     </section>
 
     <!-- Section-4 HTML START -->
+    <section class="search_resume_templates p-4 p-md-5 mb-4">
+        <img src="{% static '/images/builderimg.png' %}" alt="Search CV Image" />
+        <h2>HOW TO MAKE A RESUME</h2>
+        <p>BUILD A CAPTIVATING RESUME IN MINUTES!</p>
+        <div class="options">
+            <p>1️⃣ Select your favorite templates.</p>
+            <p>2️⃣ Add your contact information.</p>
+            <p>3️⃣ Fill out your work history and eductions.</p>
+            <p>4️⃣ Select from our hundreds of job descriptions and skill examples, or input your own.</p>
+            <p>5️⃣ Review your resume & download it.</p>
+        </div>
+        <p><a class="btn" href="#">Build Your Resume</a></p>
+    </section>
+
+    <!-- Section-5 HTML START -->
+    <!-- <section class="p-4 p-md-5 mb-4">
+        <div class="buildresume text-center">
+            <h2>PROFESSIONAL RESUME TEMPLATES</h2>
+            <p class="font-italic">
+                CHOOSE FROM 15+ TAILORED TEMPLATES THAT HAVE LANDED THOUSANDS
+                OF PEOPLE LIKE <br />
+                YOU THE JOBS THEY WERE DREAMING OF.
+            </p>
+        </div>
+    </section> -->
+
+    <!-- Section-6 HTML START -->
     <section class="container">
         <h2>
             3 EASY STEPS TO CREATE YOUR PERFECT <br />
@@ -109,7 +528,8 @@
             <div class="steps col-md-4 text-center">
                 <img src="{% static '/images/customizeresume.jpg' %}" alt="Step 2 Image" />
                 <h3 class="heading-h3">
-                    CUSTOMIZE YOUR RESUME
+                    CUSTOMIZE YOUR
+                    <br> RESUME
                 </h3>
                 <p class="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -119,7 +539,8 @@
             <div class="steps col-md-4 text-center">
                 <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 3 Image" />
                 <h3 class="heading-h3">
-                    DOWNLOAD OR PRINT
+                    DOWNLOAD OR
+                    <br> PRINT
                 </h3>
                 <p class="">
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -129,36 +550,9 @@
         </div>
     </section>
 
-    <!-- Section-5 HTML START -->
-    <section class="p-4 p-md-5 mb-4">
-        <div class="buildresume text-center">
-            <h2>PROFESSIONAL RESUME TEMPLATES</h2>
-            <p class="font-italic">
-                CHOOSE FROM 15+ TAILORED TEMPLATES THAT HAVE LANDED THOUSANDS
-                OF PEOPLE LIKE <br />
-                YOU THE JOBS THEY WERE DREAMING OF.
-            </p>
-        </div>
-    </section>
-
-    <!-- Section-6 HTML START -->
-    <section class="search_resume_templates p-4 p-md-5 mb-4">
-        <img src="{% static '/images/searchresume.png' %}" alt="Search CV Image" />
-        <h2>HOW TO MAKE A RESUME</h2>
-        <p>BUILD A CAPTIVATING RESUME IN MINUTES!</p>
-        <div class="options">
-            <p>1️⃣ Select your favorite templates.</p>
-            <p>2️⃣ Add your contact information.</p>
-            <p>3️⃣ Fill out your work history and eductions.</p>
-            <p>4️⃣ Select from our hundreds of job descriptions and skill examples, or input your own.</p>
-            <p>5️⃣ Review your resume & download it.</p>
-        </div>
-        <p><a class="btn" href="#">Build Your Resume</a></p>
-    </section>
-
     <!-- Section-7 HTML START -->
-    <section class="about-us" id="about-us p-4 p-md-5 mb-4">
-        <img src="{% static '/images/heart.png' %}" alt="">
+    <section class="about-us p-4 p-md-5 mb-4" id="about-us">
+        <img src="{% static '/images/heart.png' %}" alt="heart-img">
         <h1>Why our customers love</h1>
         <h2>our resume builder</h2>
         <p>Resume.io’s online builder tool and collection of elegant, recruiter-tested templates are used by more than
@@ -167,7 +561,7 @@
         <p><a class="btn" href="{% url 'resume_templates' %}">Select Templates</a></p>
 
     </section>
-
+   
 
 </body>
 
