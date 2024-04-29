@@ -7,8 +7,6 @@
   #contact {
     width: 100%;
     height: auto;
-    background: rgb(15, 157, 182);
-    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(15, 157, 182) 100%);
     color: black;
     padding: 50px 0;
     text-align: center;
@@ -24,9 +22,9 @@
 
   .contact-wrapper {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
     max-width: 1200px;
+    padding-left: 15rem;
     margin: 0 auto;
   }
 
@@ -47,17 +45,22 @@
   }
 
   .send-button {
-    background-color: #0f9db6;
-    color: white;
+    width: 10rem;
     border: none;
-    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    margin-right: 17rem;
+    text-align: center;
+    padding: 12px;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 1rem;
+    transition: all 0.5s;
   }
 
   .send-button:hover {
-    background-color: #0c7f93;
+    padding-right: 24px;
+    padding-left: 8px;
   }
 
   .direct-contact-container {
@@ -80,29 +83,35 @@
     margin-right: 10px;
   }
 
-  .social-media-list {
+  .contact-list .list-item span a{
+    color: black;
+  }
+
+  
+  .social-media .social-media-list {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    justify-content: start;
+    margin-left: 4rem;
+    margin-top: 1rem;
   }
 
-  .social-media-list li {
+  .social-media .social-media-list li a {
     margin: 0 10px;
   }
 
-  .social-media-list a {
-    color: #0f9db6;
+  .social-media .social-media-list a {
+    color: black;
     font-size: 1.5rem;
   }
 
-  .social-media-list a:hover {
+  .social-media .social-media-list a:hover {
     color: #0c7f93;
   }
 
   .copyright {
-    text-align: center;
+    margin-right: 9rem;
     margin-top: 20px;
     font-size: 0.8rem;
   }
@@ -112,7 +121,7 @@
 {% block body %}
 <section id="contact">
   <h1>Contact</h1>
-  <div class="contact-wrapper">
+  <div class="contact-wrapper ">
     <!-- Left contact page -->
     <form method="post" action="{% url 'saveenquiry' %}" role="form" novalidate class="bv-form contact-form" id="contact-form">
       {% csrf_token %}
@@ -149,13 +158,13 @@
           </span>
         </li>
       </ul>
-      <hr>
-      <ul class="social-media-list">
-        <li><a href="https://github.com/VanshSrivastav21-VS"><i class="fa-brands fa-github"></i></a></li>
-        <li><a href="https://www.linkedin.com/in/vansh-srivastav-24550828b/"><i class="fa-brands fa-linkedin"></i></a></li>
-        <li><a href="https://www.instagram.com/vanshrivastav._.4u?igsh=eXd0NXh6MndnZ2Q1"><i class="fa-brands fa-instagram"></i></a></li>
-      </ul>
-      <hr>
+      <div class="social-media">
+        <ul class="social-media-list">
+          <li><a href="https://github.com/VanshSrivastav21-VS"><i class="fa-brands fa-github"></i></a></li>
+          <li><a href="https://www.linkedin.com/in/vansh-srivastav-24550828b/"><i class="fa-brands fa-linkedin"></i></a></li>
+          <li><a href="https://www.instagram.com/vanshrivastav._.4u?igsh=eXd0NXh6MndnZ2Q1"><i class="fa-brands fa-instagram"></i></a></li>
+        </ul>
+      </div>
       <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
     </div>
   </div>

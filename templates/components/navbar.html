@@ -3,7 +3,7 @@
 
 {% block css %}
 <style>
-  .navbar{
+  .navbar {
     box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
   }
 
@@ -61,12 +61,12 @@
       </div>
       {% if user.is_authenticated %}
       <li class="nav-item dropdown">
-        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
-          aria-expanded="false">
+        <a class="nav-link dropdown-toggle btn" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false" style="background-color: rgb(15, 157, 182); color: white; padding: 7px;">
           <i class="bi bi-person"></i> {{ user.username }}
         </a>
         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="{% url 'profile' %}">Profile</a></li>
           <li><a class="dropdown-item" href="#">Settings</a></li>
           <li>
             <hr class="dropdown-divider">
