@@ -3,340 +3,161 @@
 
 {% block css %}
 <style>
+  /* Add your CSS styles here */
   #contact {
     width: 100%;
-    height: 100%;
+    height: auto;
+    background: rgb(15, 157, 182);
+    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(15, 157, 182) 100%);
+    color: black;
+    padding: 50px 0;
+    text-align: center;
   }
 
-  .section-header {
-    text-align: center;
-    margin: 0 auto;
-    padding: 40px 0;
-    font: 300 60px;
+  #contact h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
     font-family: century;
-    color: #fff;
     text-transform: uppercase;
     letter-spacing: 5px;
   }
 
   .contact-wrapper {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
     margin: 0 auto;
+  }
+
+  .contact-form {
+    flex-basis: 40%;
+    padding: 20px;
+  }
+
+  .contact-form input[type="text"],
+  .contact-form input[type="email"],
+  .contact-form textarea {
+    width: 90%;
     padding: 10px;
-    position: relative;
-    max-width: 840px;
-  }
-
-  /* Left contact page */
-  .form-horizontal {
-    float: left;
-    max-width: 400px;
-    font-family: 'Lato';
-    font-weight: 400;
-  }
-
-  .form-control,
-  textarea {
-    max-width: 400px;
-    background-color: white;
-    color: black;
-    letter-spacing: 1px;
-    margin-bottom: .5rem;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
   }
 
   .send-button {
-    margin-top: 15px;
-    height: 34px;
-    width: 400px;
-    overflow: hidden;
-    transition: all .2s ease-in-out;
-    background-color: rgb(15, 157, 182);
+    background-color: #0f9db6;
+    color: white;
     border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
   }
 
   .send-button:hover {
-    background-color: rgb(15, 157, 182);
-
+    background-color: #0c7f93;
   }
 
-  .alt-send-button {
-    width: 400px;
-    height: 34px;
-    transition: all .2s ease-in-out;
-  }
-
-  .send-text {
-    display: block;
-    margin-top: 10px;
-    font: 700 12px 'Lato', sans-serif;
-    letter-spacing: 2px;
-  }
-
-  .alt-send-button:hover {
-    transform: translate3d(0px, -29px, 0px);
-  }
-
-  /* Begin Right Contact Page */
   .direct-contact-container {
-    max-width: 400px;
+    flex-basis: 45%;
+    padding: 20px;
   }
 
-  /* Location, Phone, Email Section */
   .contact-list {
-    list-style-type: none;
-    margin-left: -30px;
-    padding-right: 20px;
-  }
-
-  .list-item {
-    line-height: 4;
-    color: #aaa;
-  }
-
-  .contact-text {
-    font-size: 20px;
-    letter-spacing: 1.9px;
-    color: #bbb;
-  }
-
-  .place {
-    margin-left: 62px;
-  }
-
-  .phone {
-    margin-left: 56px;
-  }
-
-  .gmail {
-    margin-left: 53px;
-  }
-
-  .contact-text a {
-    color: #bbb;
-    text-decoration: none;
-    transition-duration: 0.2s;
-  }
-
-  .contact-text a:hover {
-    color: #fff;
-    text-decoration: none;
-  }
-
-
-  /* Social Media Icons */
-  .social-media-list {
-    position: relative;
-    font-size: 22px;
-    text-align: center;
-    width: 100%;
-    margin: 0 auto;
+    list-style: none;
     padding: 0;
+    margin: 0;
   }
 
-  .social-media-list li a {
-    color: #fff;
+  .contact-list li {
+    margin-bottom: 10px;
+    text-align: left;
+  }
+
+  .contact-list i {
+    margin-right: 10px;
+  }
+
+  .social-media-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: start;
   }
 
   .social-media-list li {
-    position: relative;
-    display: inline-block;
-    margin: 10px 3px;
-    line-height: 60px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 2rem;
+    margin: 0 10px;
   }
 
+  .social-media-list a {
+    color: #0f9db6;
+    font-size: 1.5rem;
+  }
 
-  .social-media-list li:hover a {
-    color: rgb(15, 157, 182);
-
+  .social-media-list a:hover {
+    color: #0c7f93;
   }
 
   .copyright {
-    font: 200 14px 'Oswald', sans-serif;
-    color: #555;
-    letter-spacing: 1px;
     text-align: center;
-  }
-
-  hr {
-    border-color: rgba(255, 255, 255, .6);
-  }
-
-  /* Begin Media Queries*/
-  @media screen and (max-width: 850px) {
-    .contact-wrapper {
-      display: flex;
-      flex-direction: column;
-    }
-
-    .direct-contact-container,
-    .form-horizontal {
-      margin: 0 auto;
-    }
-
-    .direct-contact-container {
-      margin-top: 60px;
-      max-width: 300px;
-    }
-
-    .social-media-list li {
-      height: 60px;
-      width: 60px;
-      line-height: 60px;
-    }
-
-    .social-media-list li:after {
-      width: 60px;
-      height: 60px;
-      line-height: 60px;
-    }
-  }
-
-  @media screen and (max-width: 569px) {
-
-    .direct-contact-container,
-    .form-wrapper {
-      float: none;
-      margin: 0 auto;
-    }
-
-    .form-control,
-    textarea {
-      margin: 0 auto;
-    }
-
-
-    .name,
-    .email,
-    textarea {
-      width: 280px;
-    }
-
-    .direct-contact-container {
-      margin-top: 60px;
-      max-width: 350px;
-    }
-
-
-    .social-media-list {
-      left: 0;
-    }
-
-    .social-media-list li {
-      height: 55px;
-      width: 55px;
-      line-height: 55px;
-      font-size: 2rem;
-    }
-
-    .social-media-list li:after {
-      width: 55px;
-      height: 55px;
-      line-height: 55px;
-    }
-
-  }
-
-  @media screen and (max-width: 410px) {
-    .send-button {
-      width: 99%;
-    }
+    margin-top: 20px;
+    font-size: 0.8rem;
   }
 </style>
 {% endblock css %}
 
-{% block js %}
-<script>
-  document.querySelector('#contact-form').addEventListener('submit', (e) => {
-    e.preventDefault();
-    e.target.elements.name.value = '';
-    e.target.elements.email.value = '';
-    e.target.elements.message.value = '';
-  });
-
-</script>
-{% endblock js %}
-
 {% block body %}
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="{% static '/CSS/contact.css' %}">
-  <title>Contact Form</title>
-</head>
-
-<body>
-  <section id="contact">
-    <h1 class="section-header">Contact</h1>
-    <div class="contact-wrapper">
-      <!-- Left contact page -->
-      <form method="post" action="{% url 'saveenquiry' %}" role="form" novalidate class="bv-form">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="text" class="form-control" id="name" placeholder="NAME" name="name" value="" required>
-          </div>
-        </div>
-        <div class="form-group">
-          <div class="col-sm-12">
-            <input type="email" class="form-control" id="email" placeholder="EMAIL" name="email" value="" required>
-          </div>
-        </div>
-        <textarea class="form-control" rows="10" placeholder="MESSAGE" name="message" required></textarea>
-        <button class="btn btn-primary send-button" id="submit" type="submit" value="SEND">
-          <div class="alt-send-button">
-            <i class="fa fa-paper-plane"></i><span class="send-text">SEND</span>
-          </div>
-        </button>
-      </form>
-
-      <!-- Right contact page -->
-      <div class="direct-contact-container" style="padding-left: 4rem;">
-        <ul class="contact-list">
-          <li class="list-item">
-            <i class="fa fa-map-marker fa-2x"></i>
-            <span class="contact-text place">Jaunpur, UP</span>
-          </li>
-          <li class="list-item">
-            <i class="fa fa-phone fa-2x"></i>
-            <span class="contact-text phone">
-              <a href="tel:7080735344" title="Give me a call">+91 70807 35344</a>
-            </span>
-          </li>
-          <li class="list-item">
-            <i class="fa fa-envelope fa-2x"></i>
-            <span class="contact-text gmail">
-              <a href="mailto:vanshsrivastavjnp@gmail.com" title="Send me an email">vanshsrivastavjnp@gmail.com</a>
-            </span>
-          </li>
-        </ul>
-        <hr>
-        <ul class="social-media-list">
-          <li><a href="https://github.com/VanshSrivastav21-VS"><i class="fa-brands fa-github"></i></a></li>
-          <li><a href="https://www.linkedin.com/in/vansh-srivastav-24550828b/"><i class="fa-brands fa-linkedin"></i></a>
-          <li><a href="https://www.instagram.com/vanshrivastav._.4u?igsh=eXd0NXh6MndnZ2Q1"><i class="fa-brands fa-instagram"></i></a>
-          </li>
-        </ul>
-        <hr>
-        <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
+<section id="contact">
+  <h1>Contact</h1>
+  <div class="contact-wrapper">
+    <!-- Left contact page -->
+    <form method="post" action="{% url 'saveenquiry' %}" role="form" novalidate class="bv-form contact-form" id="contact-form">
+      {% csrf_token %}
+      {{ form.as_p }}
+      <div class="form-group">
+        <input type="text" class="form-control" id="name" placeholder="Name" name="name" value="" required>
       </div>
+      <div class="form-group">
+        <input type="email" class="form-control" id="email" placeholder="Email" name="email" value="" required>
+      </div>
+      <div class="form-group">
+        <textarea class="form-control textarea-control" rows="5" placeholder="Message" name="message" required></textarea>
+      </div>
+      <button class="send-button" type="submit">Send</button>
+    </form>
 
-
+    <!-- Right contact page -->
+    <div class="direct-contact-container">
+      <ul class="contact-list">
+        <li class="list-item">
+          <i class="fa fa-map-marker fa-2x"></i>
+          <span>Jaunpur, UP</span>
+        </li>
+        <li class="list-item">
+          <i class="fa fa-phone fa-2x"></i>
+          <span>
+            <a href="tel:7080735344" title="Give me a call">+91 70807 35344</a>
+          </span>
+        </li>
+        <li class="list-item">
+          <i class="fa fa-envelope fa-2x"></i>
+          <span>
+            <a href="mailto:vanshsrivastavjnp@gmail.com" title="Send me an email">vanshsrivastavjnp@gmail.com</a>
+          </span>
+        </li>
+      </ul>
+      <hr>
+      <ul class="social-media-list">
+        <li><a href="https://github.com/VanshSrivastav21-VS"><i class="fa-brands fa-github"></i></a></li>
+        <li><a href="https://www.linkedin.com/in/vansh-srivastav-24550828b/"><i class="fa-brands fa-linkedin"></i></a></li>
+        <li><a href="https://www.instagram.com/vanshrivastav._.4u?igsh=eXd0NXh6MndnZ2Q1"><i class="fa-brands fa-instagram"></i></a></li>
+      </ul>
+      <hr>
+      <div class="copyright">&copy; ALL OF THE RIGHTS RESERVED</div>
     </div>
-
-  </section>
-
-
-</body>
-
-</html>
-
+  </div>
+</section>
 {% endblock body %}

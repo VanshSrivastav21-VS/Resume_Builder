@@ -2,24 +2,94 @@
 
 
 {% block css %}
-  <style>
-    .navbar{
-      font-family: sans-serif;
-      font-weight: bold;
-    }
+<style>
+  .navbar{
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+  }
 
-    .navbar .collapse ul li a{
-      color: white;
-      padding-left: 1rem;
-      text-decoration: none;
-    }
-  
-  </style>
+  .navbar .collapse ul li a {
+    color: black;
+    padding-left: 1rem;
+    text-decoration: none;
+  }
+</style>
 {% endblock css %}
-  
+
 
 {% block body %}
 <!DOCTYPE html>
+<html>
+
+<head>
+  <title>Align nav bar item into center</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous" />
+
+  <link rel="stylesheet" type="text/css"
+    href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <style>
+    .navbar-nav.navbar-center {
+      position: absolute;
+      left: 50%;
+      transform: translatex(-50%);
+    }
+  </style>
+</head>
+
+<body>
+  <!--NAVBAR STARTING-->
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#" style="color: rgb(15, 157, 182); font-weight: bold;">
+        CraftMyCV
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class=" nav navbar-nav navbar-center">
+          <li><a href="{% url 'home' %}">Home</a></li>
+          <li><a href="#">Features</a></li>
+          <li><a href="{% url 'resume_templates' %}">Resumes</a></li>
+          <li><a href="{% url 'about' %}">About</a></li>
+          <li><a href="{% url 'contact' %}">Contact</a></li>
+          <li><a href="{% url 'resume' %}"></a></li>
+        </ul>
+      </div>
+      {% if user.is_authenticated %}
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          <i class="bi bi-person"></i> {{ user.username }}
+        </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <li><a class="dropdown-item" href="#">Profile</a></li>
+          <li><a class="dropdown-item" href="#">Settings</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li><a class="dropdown-item" href="{% url 'logout' %}">Logout</a></li>
+        </ul>
+      </li>
+      {% else %}
+      <a href="{% url 'login' %}" class="btn btn-outline-dark me-2">Login</a>
+      <a href="{% url 'register' %}" class="btn" style="background-color: rgb(15, 157, 182); color: white;">Sign-up</a>
+      {% endif %}
+    </div>
+  </nav>
+</body>
+
+</html>
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
 <html>
 
 <head>
@@ -28,15 +98,23 @@
 </head>
 
 <body style="background-color: #1b1b1b; color:white">
+
+
+
+
+
   <header class="navbar navbar-expand-lg">
+    <div class="logo">
+      <p>CraftMyCV</p>
+    </div>
     <div class="container-fluid">
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
         aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+      <div class="collapse navbar-collapse " id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0 ">
           <li><a href="{% url 'home' %}">Home</a></li>
           <li><a href="#">Features</a></li>
           <li><a href="{% url 'resume_templates' %}">Resumes</a></li>
@@ -61,13 +139,14 @@
         </li>
         {% else %}
         <a href="{% url 'login' %}" class="btn btn-outline-light me-2">Login</a>
-        <a href="{% url 'register' %}" class="btn" style="background-color: rgb(15, 157, 182); color: white;">Sign-up</a>
+        <a href="{% url 'register' %}" class="btn"
+          style="background-color: rgb(15, 157, 182); color: white;">Sign-up</a>
         {% endif %}
       </div>
     </div>
   </header>
 </body>
 
-</html>
+</html> -->
 
 {% endblock body %}

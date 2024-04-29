@@ -2,11 +2,9 @@ from django.shortcuts import render
 from .models import ResumeTemplate
 from django.contrib.auth.decorators import login_required
 
-@login_required
 def home(request):
     return render(request, 'resumebuilder/home.html')
 
-@login_required
 def resume(request): 
 	if request.method == 'POST': 
 		name = request.POST.get('name', '') 
@@ -71,21 +69,17 @@ def resume(request):
 	
 	return render(request, 'resumebuilder/resumetemplate.html') 
 
-@login_required
 def resume_templates(request):
     templates = ResumeTemplate.objects.all()
     return render(request, 'resumebuilder/resume_templates.html', {'templates': templates})
 
-@login_required
 def resumetemplate(request):
     return render(request, 'resumebuilder/resumetemplates.html')
 
-@login_required
 def resumetemplatedownload(request):
     templates = ResumeTemplate.objects.all()
     return render(request, 'resumebuilder/resumetemplatedownload.html', {'templates': templates})
 
-@login_required
 def about(request):
     return render(request, 'resumebuilder/about.html')
 

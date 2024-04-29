@@ -4,87 +4,199 @@
 
 {% block css %}
 <style>
-  body {
-    font-family: Arial, Helvetica, sans-serif;
-    margin: 0;
-  }
+  /* About Section */
 
-  html {
-    box-sizing: border-box;
-  }
-
-  *,
-  *:before,
-  *:after {
-    box-sizing: inherit;
-  }
-
-  .column {
-    float: left;
-    width: 30%;
-    margin-bottom: 16px;
-    margin-left: 2rem;
-    padding: 0 8px;
-  }
-
-  .card {
-    border: 0 2px 10px rgb(15, 157, 182);
-    box-shadow: 0 0 10px 5px rgb(15, 157, 182);
-    margin: 8px;
-  }
-
-  .about-section {
-    padding: 50px;
+  .about {
+    background: rgb(15, 157, 182);
+    background: linear-gradient(360deg, rgb(245, 255, 245) 0%, rgb(15, 157, 182) 100%);
+    padding: 100px 0 20px 0;
     text-align: center;
-    color: white;
   }
 
-  .about-section p{
-    margin-left: 23rem;
-    margin-right: 23rem;
+  .about h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
   }
 
-  .container {
-    padding: 0 16px;
+  .about p {
+    font-size: 1rem;
+    color: #323030;
+    max-width: 600px;
+    margin: 0 auto;
   }
 
-  .container::after,
-  .row::after {
-    content: "";
-    clear: both;
-    display: table;
+  .about-info {
+    margin: 2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: left;
   }
 
-  .title {
-    color: grey;
+  .about-img {
+    width: 20rem;
+    height: 20rem;
+
   }
 
-  .button {
-    position: relative;
-    display: inline-block;
-    border-radius: 4px;
-    text-align: center;
-    text-decoration: none;
-    font-size: 20px;
-    font-weight: bold;
-    padding: 8px;
+  .about-img img {
     width: 100%;
-    color: #fff;
-    background-color: rgb(15, 157, 182);
-    box-shadow: 0 10px 20px -8px rgba(0, 0, 0, .7);
-    transition: all 0.5s;
-    cursor: pointer;
+    height: 100%;
+    border-radius: 5px;
+    object-fit: contain;
   }
 
-  .button:hover {
+  .about-info p {
+    font-size: 1.3rem;
+    margin: 0 2rem;
+    text-align: justify;
+  }
+
+  /*** Button */
+  .about-info .description p a {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 12px;
+    margin-top: 1rem;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .about-info p btn:hover {
     padding-right: 24px;
     padding-left: 8px;
   }
 
-  @media screen and (max-width: 650px) {
-    .column {
-      width: 100%;
+  /* Team Section */
+
+  .team {
+    padding: 30px 0;
+    text-align: center;
+  }
+
+  .team h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+
+  .team-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 18rem;
+    height: 25rem;
+    margin-top: 10px;
+  }
+
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  .card-img {
+    width: 18rem;
+    height: 12rem;
+  }
+
+  .card-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill;
+  }
+
+  .card .card-info p a {
+    color: white;
+    font-weight: bold;
+    background-color: rgb(15, 157, 182);
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+
+  .card .card-info p a:hover {
+    padding-right: 24px;
+    padding-left: 8px;
+  }
+
+  .card-name {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+
+  .card-role {
+    font-size: 1rem;
+    color: #888;
+    margin: 5px 0;
+  }
+
+  .card-email {
+    font-size: 1rem;
+    color: #555;
+  }
+
+  /* Footer */
+
+  @media (max-width: 768px) {
+    nav {
       display: block;
+    }
+
+    .logo {
+      text-align: center;
+    }
+
+    .nav-links {
+      margin-top: 1rem;
+      justify-content: space-between;
+    }
+
+    .nav-links li {
+      margin-right: 0;
+    }
+
+    .about h1 {
+      font-size: 2rem;
+    }
+
+    .about p {
+      font-size: 0.9rem;
+    }
+
+    .about-info {
+      flex-direction: column;
+      text-align: center;
+    }
+
+    .about-img {
+      width: 60%;
+      height: 60%;
+      margin-bottom: 1rem;
+    }
+
+    .about-info p {
+      margin: 1rem 2rem;
+    }
+
+    .about-info button {
+      margin: 1rem 2rem;
+      width: 10rem;
+    }
+
+    .team {
+      margin: 0 1rem;
     }
   }
 </style>
@@ -93,63 +205,89 @@
 
 {% block body %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>About</title>
+  <title>About Us</title>
 </head>
 
 <body>
-  <div class="about-section">
+  <section class="about">
     <h1>About Us</h1>
-    <p>Everything that isn’t covered by our technical capabilities is covered by our knowledge base and resume writing
-      samples.</p>
-  </div>
+    <p style="font-weight: bold">
+      Our resume builder is powerful and easy to use...
+    </p>
+    <div class="about-info">
+      <div class="about-img">
+        <img src="{% static '/images/aboutimg.png' %}">
+      </div>
+      <div class="description">
+        <p> Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and easy to use,
+          with a range of amazing functions. Custom-tailor resumes for any job within minutes. Increase your interview
+          chances and rise above the competition.
 
-  <h2 style="text-align:center">Our Team</h2>
-  <div class="row">
-    <div class="column">
-      <div class="card">
-        <img src="{% static '/images/boy1.jpeg' %}" alt="Jane" style="width:100%">
-        <div class="container">
-          <h2>Vansh Srivastav</h2>
-          <p class="title">CEO & Founder</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>vanshsrivastavjnp@gmail.com</p>
-          <p><a class="button" href="{% url 'contact' %}">Contact</a></p>
+          We have developed a resume builder based on feedback from thousands of users, recruiter expertise, stellar
+          template design and the best hiring practices. The goal is simple: help you land that dream job interview! Get
+          an advantage in the modern professional environment.
+        </p>
+        <p><a class="btn" href="#">Build Your Resume</a></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- <section class="team">
+    <h1>Meet Our Team</h1>
+    <div class="team-cards"> -->
+
+  <!-- Cards here -->
+  <!-- Card 1 -->
+
+  <!-- <div class="card">
+        <div class="card-img">
+          <img src="">
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">Jane</h2>
+          <p class="card-role">CEO and Founder</p>
+          <p class="card-email">jane@example.com</p>
+          <p><a class="btn" href="#">Contact</a></p>
+        </div>
+      </div> -->
+
+  <!-- Card 2 -->
+
+  <!-- <div class="card">
+        <div class="card-img">
+          <img src="">
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">Miller</h2>
+          <p class="card-role">Co-Founder</p>
+          <p class="card-email">Miller@example.com</p>
+          <p><a class="btn" href="#">Contact</a></p>
+        </div>
+      </div> -->
+
+  <!-- Card 3 -->
+
+  <!-- <div class="card">
+        <div class="card-img">
+          <img src="">
+        </div>
+        <div class="card-info">
+          <h2 class="card-name">Joe</h2>
+          <p class="card-role">Co-Founder</p>
+          <p class="card-email">Joe@example.com</p>
+          <p><a class="btn" href="#">Contact</a></p>
         </div>
       </div>
     </div>
+  </section> -->
 
-    <div class="column">
-      <div class="card">
-        <img src="{% static '/images/girl.jpeg' %}" alt="Mike" style="width:100%">
-        <div class="container">
-          <h2>Ayushi Gupta</h2>
-          <p class="title">Art Director</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>ayushiguptajnp@gmail.com</p>
-          <p><a class="button" href="{% url 'contact' %}">Contact</a></p>
-        </div>
-      </div>
-    </div>
-
-    <div class="column">
-      <div class="card">
-        <img src="{% static '/images/boy2.jpeg' %}" alt="John" style="width:100%">
-        <div class="container">
-          <h2>Amit Pathak</h2>
-          <p class="title">Designer</p>
-          <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-          <p>amitpathakamz@gmail.com</p>
-          <p><a class="button" href="{% url 'contact' %}">Contact</a></p>
-        </div>
-      </div>
-    </div>
-  </div>
 </body>
 
 </html>
+
 {% endblock body %}

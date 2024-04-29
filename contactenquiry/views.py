@@ -2,7 +2,7 @@ from django.shortcuts import render
 from contactenquiry .models import contactEnquiry
 from django.contrib.auth.decorators import login_required
 
-@login_required
+
 def contact(request):
     return render(request, 'contactenquiry/contact.html')
 
