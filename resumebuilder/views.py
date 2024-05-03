@@ -5,10 +5,11 @@ from django.contrib.auth.decorators import login_required
 def home(request):
     return render(request, 'resumebuilder/home.html')
 
+@login_required
 def resume(request): 
 	if request.method == 'POST': 
 		name = request.POST.get('name', '') 
-		about = request.POST.get('about', '') 
+		summary = request.POST.get('summary', '') 
 		age = request.POST.get('age', '') 
 		email = request.POST.get('email', '') 
 		phone = request.POST.get('phone', '') 
@@ -47,7 +48,7 @@ def resume(request):
 		ach2 = request.POST.get('ach2', '') 
 		ach3 = request.POST.get('ach3', '') 
 		return render(request, 'resumebuilder/resume.html', {'name':name, 
-											'about':about, 'skill5':skill5, 
+											'summary':summary, 'skill5':skill5, 
 											'age':age, 'email':email, 
 											'phone':phone, 'skill1':skill1, 
 											'skill2':skill2, 'skill3':skill3, 
@@ -69,13 +70,16 @@ def resume(request):
 	
 	return render(request, 'resumebuilder/resumetemplate.html') 
 
+@login_required
 def resume_templates(request):
     templates = ResumeTemplate.objects.all()
     return render(request, 'resumebuilder/resume_templates.html', {'templates': templates})
 
+@login_required
 def resumetemplate(request):
     return render(request, 'resumebuilder/resumetemplates.html')
 
+@login_required
 def resumetemplatedownload(request):
     templates = ResumeTemplate.objects.all()
     return render(request, 'resumebuilder/resumetemplatedownload.html', {'templates': templates})

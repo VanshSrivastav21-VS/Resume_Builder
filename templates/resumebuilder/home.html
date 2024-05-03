@@ -4,7 +4,8 @@
 {% block css %}
 <style>
     body {
-        max-width: 1500px;
+        overflow-x: hidden;
+        /* Prevent horizontal scrolling */
     }
 
     html {
@@ -12,9 +13,26 @@
     }
 
     h1,
-    h2 {
+    h2, p {
         font-family: century;
-        font-weight: 700;
+    }
+
+    .button .btn {
+        border: none;
+        color: white;
+        font-weight: bold;
+        background-color: rgb(15, 157, 182);
+        text-align: center;
+        padding: 13px;
+        cursor: pointer;
+        transition: all 0.5s;
+    }
+
+    .button .btn:hover {
+        background-color: black;
+        color: white;
+        padding-right: 24px;
+        padding-left: 8px;
     }
 
     /**Section-1 CSS Start**/
@@ -23,6 +41,10 @@
         align-items: center;
         justify-content: center;
         padding-left: 5rem;
+    }
+
+    .header1 {
+        text-align: left;
     }
 
     .header1 h1 {
@@ -35,41 +57,25 @@
     }
 
     .header1 p {
-        font-size: 22px;
+        font-size: 19px;
         line-height: 28px;
         margin-bottom: 24px;
-        color: darkgray;
+        color: rgb(70, 67, 67);
     }
 
-    .header1 .btn {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(15, 157, 182);
-        text-align: center;
-        padding: 16px;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    .header1 .btn:hover {
-        padding-right: 24px;
-        padding-left: 8px;
-    }
-
-    .headerimg img {
-        width: 100%;
+    .headerimage img {
+        width: 95%;
         border: 0 2px 10px rgb(15, 157, 182);
         box-shadow: 0 0 10px 5px rgb(15, 157, 182);
         transition: 1s ease;
     }
 
-    .headerimg img:hover {
+    /* .headerimg img:hover {
         -webkit-transform: scale(0.8);
         -ms-transform: scale(0.8);
         transform: scale(0.8);
         transition: 1s ease;
-    }
-
+    } */
     /**Section-1 CSS End**/
 
     /**Section-2 CSS Start**/
@@ -77,7 +83,10 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-left: 5rem;
+    }
+
+    .header2 {
+        text-align: left;
     }
 
     .header2 h1 {
@@ -92,53 +101,21 @@
     .header2 p {
         font-size: 19px;
         line-height: 28px;
-        margin-bottom: 24px;
-        color: darkgray;
+        color: rgb(70, 67, 67);
     }
 
-    .header2 .btn {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(15, 157, 182);
-        text-align: center;
-        padding: 16px;
-        cursor: pointer;
-        transition: all 0.5s;
-
-    }
-
-    .header2 .btn:hover {
-        padding-right: 24px;
-        padding-left: 8px;
-    }
-
-    .buildimg img {
-        width: 90%;
+    .header2image img {
+        width: 100%;
         border: 0 2px 10px rgb(15, 157, 182);
         box-shadow: 0 0 10px 5px rgb(15, 157, 182);
-        transition: 1s ease;
-    }
-
-    .buildimg img:hover {
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
         transition: 1s ease;
     }
 
     /**Section-2 CSS End**/
 
     /**Section-3 CSS Start**/
-    .container3 {
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        padding-left: 5rem;
-        background-color: rgb(29, 51, 54);
-        border: 0 2px 10px rgb(15, 157, 182);
-        box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+    .header3 {
+        text-align: left;
     }
 
     .header3 h1 {
@@ -155,22 +132,7 @@
         font-size: 19px;
         line-height: 28px;
         margin-bottom: 24px;
-        color: darkgray;
-    }
-
-    .header3 .btn {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(15, 157, 182);
-        text-align: center;
-        padding: 16px;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    .header3 .btn:hover {
-        padding-right: 24px;
-        padding-left: 8px;
+        color: rgb(70, 67, 67);
     }
 
     .header3 .resume_rating_star {
@@ -183,12 +145,7 @@
 
     .header3 .resume_rating_star p {
         font-size: 14px;
-        color: white;
-    }
-
-    .pic-ctn {
-        width: 100vw;
-        height: 200px;
+        color: rgb(70, 67, 67);
     }
 
     @keyframes display {
@@ -222,18 +179,18 @@
         position: relative;
         width: 100vw;
         height: 300px;
-        margin-top: 15vh;
-        margin-bottom: 25vh;
+        /* margin-top: 15vh; */
+        margin-bottom: 30vh;
     }
 
     .pic-ctn img {
-        max-width: 50%;
+        max-width: 30%;
     }
 
     .pic-ctn>img {
         position: absolute;
         top: 0;
-        left: calc(50% - 100px);
+        left: calc(50% - 500px);
         opacity: 0;
         animation: display 20s infinite;
     }
@@ -258,23 +215,15 @@
 
     /**Section-4 CSS Start**/
     .search_resume_templates {
-        /* padding: 50px; */
         text-align: center;
     }
 
-    .search_resume_templates img{
-        transition: 1s ease;
-    }
-
-    .search_resume_templates img:hover{
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-        transition: 1s ease;
-    }
-
     .search_resume_templates h2 {
-        margin-top: 2rem;
+        margin-top: .5rem;
+    }
+
+    .search_resume_templates p{
+        margin-top: .5rem;
     }
 
     .search_resume_templates .options {
@@ -285,29 +234,9 @@
         text-align: left;
     }
 
-    .search_resume_templates .btn {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(15, 157, 182);
-        text-align: center;
-        padding: 16px;
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    .search_resume_templates .btn:hover {
-        padding-right: 24px;
-        padding-left: 8px;
-    }
-
     /**Section-4 CSS End**/
 
-    /**Section-6 CSS Start**/
-    .container {
-        /* padding: 50px; */
-        text-align: center;
-    }
-
+    /**Section-5 CSS Start**/
     h2 {
         font-size: 28px;
         padding-bottom: 2rem;
@@ -317,17 +246,17 @@
         display: flex;
         text-align: center;
         justify-content: center;
+        margin-right: 6rem;
     }
 
     .steps {
-        margin-bottom: 30px;
         padding: 20px;
         margin-left: 2rem;
         background-color: #f9f9f9;
         color: black;
         border-radius: 8px;
         border: 0 2px 10px rgb(15, 157, 182);
-        box-shadow: 0 0 10px 5px rgb(15, 157, 182);
+        box-shadow: 0 0 5px .5px rgb(15, 157, 182);
     }
 
     .steps img {
@@ -344,39 +273,11 @@
         font-size: 16px;
     }
 
-    .choose-templates .steps .btn {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(15, 157, 182);
-        text-align: center;
-        padding: 16px;
-        cursor: pointer;
-        transition: all 0.5s;
-
-    }
-
-    .choose-templates .steps .btn:hover {
-        padding-right: 24px;
-        padding-left: 8px;
-    }
-
-    /**Section-6 CSS End**/
-
+    /**Section-5 CSS End**/
 
     /**Section-7 CSS Start**/
     .about-us {
         text-align: center;
-    }
-
-    .about-us img{
-        transition: 1s ease;
-    }
-
-    .about-us img:hover{
-        -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-        transform: scale(0.8);
-        transition: 1s ease;
     }
 
     .about-us h1 {
@@ -390,24 +291,8 @@
     .about-us p {
         font-size: 19px;
         line-height: 1.5;
-        padding-left: 23rem;
-        padding-right: 23rem;
-    }
-
-    .about-us .btn {
-        color: white;
-        font-weight: bold;
-        background-color: rgb(15, 157, 182);
-        text-align: center;
-        padding: 16px;
-        /* margin-bottom: 1.5rem; */
-        cursor: pointer;
-        transition: all 0.5s;
-    }
-
-    .about-us .btn:hover {
-        padding-right: 24px;
-        padding-left: 8px;
+        padding-left: 20rem;
+        padding-right: 20rem;
     }
 
     /**Section-7 CSS End**/
@@ -416,175 +301,195 @@
 
 
 {% block body %}
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Resume Builder</title>
-    <!-- Required meta tags -->
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
-
-    <!-- Bootstrap CSS v5.2.1 -->
+    <!-- Bootstrap CSS v5.3.2 -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
-
-    <link rel="stylesheet" href="{% static '/CSS/home.css' %}">
-
 </head>
-
 
 <body>
     <!-- Section-1 HTML START -->
     <section class="p-4 p-md-5 mb-4">
-        <div class="row">
-            <div class="header1 col-md-6">
-                <h1>The Ultimate</h1>
-                <h2>Resume Builder</h2>
-                <p>
-                    Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and easy
-                    to use, with a range of amazing functions. Custom-tailor resumes for any job within minutes.
-                    Increase your interview chances and rise above the competition.
-                </p>
-                <p><a class="btn" href="{% url 'resume_templates' %}">Try for Free</a></p>
-            </div>
-            <div class="headerimg col-md-6">
-                <img class="bd-placeholder-img rounded-circle" src="{% static '/images/headerimg.png' %}"
-                    alt="Resume Image" />
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="header1 col-md-6">
+                    <h1 class="display-2">The Ultimate</h1>
+                    <h2 class="display-4">Resume Builder</h2>
+                    <p class="lead">
+                        Build beautiful, recruiter-tested resumes in a few clicks! Our resume builder is powerful and
+                        easy to use, with a range of amazing functions. Custom-tailor resumes for any job within
+                        minutes. Increase your interview chances and rise above the competition.
+                    </p>
+                    <div class="button">
+                        <a class="btn btn-primary" href="{% url 'about' %}">About us...</a>
+                    </div>
+                </div>
+                <div class="headerimage col-md-6">
+                    <img class="bd-placeholder-img rounded-circle img-fluid"
+                        src="{% static '/images/headerimage.png' %}" alt="Resume Image" />
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section-2 HTML START -->
     <section class="p-4 p-md-5 mb-4">
-        <div class="row2">
-            <div class="buildimg col-md-6">
-                <img class="bd-placeholder-img" src="{% static '/images/image.png' %}" alt="Resume Image" />
-            </div>
-            <div class="header2 col-md-6">
-                <h1>Create a resume to</h1>
-                <h2>land your next job</h2>
-                <p>
-                    We have developed a <a style="text-decoration: none;" href="#">resume builder</a> based on feedback
-                    from thousands of users, recruiter expertise,
-                    stellar template design and the best hiring practices. The goal is simple: help you land that dream
-                    job interview! Get an advantage in the modern professional environment.
-                </p>
-                <p><a class="btn" href="{% url 'resume_templates' %}">Build Your Resume</a></p>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="header2image col-md-6">
+                    <img class="bd-placeholder-img img-fluid" src="{% static '/images/image.png' %}"
+                        alt="Resume Image" />
+                </div>
+                <div class="header2 col-md-6">
+                    <h1>Create a resume to</h1>
+                    <h2>land your next job</h2>
+                    <p>
+                        We have developed a <a style="text-decoration: none;" href="#">resume builder</a> based on
+                        feedback from thousands of users, recruiter expertise, stellar template design and the best
+                        hiring practices. The goal is simple: help you land that dream job interview! Get an advantage
+                        in the modern professional environment.
+                    </p>
+                    <div class="button">
+                        <a class="btn btn-primary" href="{% url 'resume_templates' %}">Build Your Resume</a>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section-3 HTML START -->
     <section class="p-4 p-md-5 mb-4">
-        <div class="container3">
-            <div class="header3 col-md-6">
-                <h1>Proven resume</h1>
-                <h2>templates</h2>
-                <p>
-                    The resume templates included in our resume builder have been approved by seasoned recruiters.
-                    Capturing the recruiters’ attention is the first step towards getting hired.
-                </p>
-                <p><a class="btn" href="{% url 'resume_templates' %}">Select Templates</a></p>
-                <div class="resume_rating_star">
-                    <h3>⭐⭐⭐⭐⭐</h3>
-                    <span>4.5 out of 5</span>
-                    <p>based on 49,984 reviews on Trustpilot</p>
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="header3 col-md-6">
+                    <h1>Proven resume</h1>
+                    <h2>templates</h2>
+                    <p>
+                        The resume templates included in our resume builder have been approved by seasoned recruiters.
+                        Capturing the recruiters’ attention is the first step towards getting hired.
+                    </p>
+                    <div class="button">
+                        <a class="btn btn-primary" href="{% url 'resume_templates' %}">Select Templates</a>
+                    </div>
+                    <div class="resume_rating_star">
+                        <h3>⭐⭐⭐⭐⭐</h3>
+                        <span>4.5 out of 5</span>
+                        <p>based on 49,984 reviews on Trustpilot</p>
+                    </div>
                 </div>
-            </div>
-            <div class="pic-ctn">
-                <img src="{% static '/images/template1.png' %}" alt="" class="pic">
-                <img src="{% static '/images/template2.png' %}" alt="" class="pic">
-                <img src="{% static '/images/template3.jpg' %}" alt="" class="pic">
-                <img src="{% static '/images/template4.png' %}" alt="" class="pic">
-                <img src="{% static '/images/template5.png' %}" alt="" class="pic">
+                <div class="header3image col-md-6">
+                    <div class="pic-ctn">
+                        <img src="{% static '/images/template1.png' %}" alt="" class="pic">
+                        <img src="{% static '/images/template2.png' %}" alt="" class="pic">
+                        <img src="{% static '/images/template3.jpg' %}" alt="" class="pic">
+                        <img src="{% static '/images/template4.png' %}" alt="" class="pic">
+                        <img src="{% static '/images/template5.png' %}" alt="" class="pic">
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section-4 HTML START -->
-    <section class="search_resume_templates p-4 p-md-5 mb-4">
-        <img src="{% static '/images/builderimg.png' %}" alt="Search CV Image" />
-        <h2>HOW TO MAKE A RESUME</h2>
-        <p>BUILD A CAPTIVATING RESUME IN MINUTES!</p>
-        <div class="options">
-            <p>1️⃣ Select your favorite templates.</p>
-            <p>2️⃣ Add your contact information.</p>
-            <p>3️⃣ Fill out your work history and eductions.</p>
-            <p>4️⃣ Select from our hundreds of job descriptions and skill examples, or input your own.</p>
-            <p>5️⃣ Review your resume & download it.</p>
+    <section class="search_resume_templates p-4  mb-4">
+        <div class="container">
+            <img src="{% static '/images/builderimg.png' %}" alt="Search CV Image" class="img-fluid mb-4">
+            <h2>HOW TO MAKE A RESUME</h2>
+            <p>BUILD A CAPTIVATING RESUME IN MINUTES!</p>
+            <div class="options">
+                <p>1️⃣ Select your favorite templates.</p>
+                <p>2️⃣ Add your contact information.</p>
+                <p>3️⃣ Fill out your work history and eductions.</p>
+                <p>4️⃣ Select from our hundreds of job descriptions and skill examples, or input your own.</p>
+                <p>5️⃣ Review your resume & download it.</p>
+            </div>
+            <div class="button mt-4">
+                <a class="btn btn-primary" href="{% url 'resume_templates' %}">Build Your Resume</a>
+            </div>
         </div>
-        <p><a class="btn" href="#">Build Your Resume</a></p>
     </section>
 
     <!-- Section-5 HTML START -->
-    <!-- <section class="p-4 p-md-5 mb-4">
-        <div class="buildresume text-center">
-            <h2>PROFESSIONAL RESUME TEMPLATES</h2>
-            <p class="font-italic">
-                CHOOSE FROM 15+ TAILORED TEMPLATES THAT HAVE LANDED THOUSANDS
-                OF PEOPLE LIKE <br />
-                YOU THE JOBS THEY WERE DREAMING OF.
-            </p>
-        </div>
-    </section> -->
-
-    <!-- Section-6 HTML START -->
-    <section class="container">
-        <h2>
-            3 EASY STEPS TO CREATE YOUR PERFECT <br />
-            RESUME
-        </h2>
-        <div class="choose-templates">
-            <div class="steps col-md-4">
-                <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 1 Image" />
-                <h3 class="heading-h3">
-                    CHOOSE YOUR RESUME TEMPLATE
-                </h3>
-                <p class="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <p><a class="btn" href="{% url 'resume_templates' %}">CHOOSE TEMPLATES</a></p>
-            </div>
-            <!-- Repeat the above code for remaining steps -->
-            <div class="steps col-md-4 text-center">
-                <img src="{% static '/images/customizeresume.jpg' %}" alt="Step 2 Image" />
-                <h3 class="heading-h3">
-                    CUSTOMIZE YOUR
-                    <br> RESUME
-                </h3>
-                <p class="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <p><a class="btn" href="{% url 'resume' %}">EDIT RESUMES</a></p>
-            </div>
-            <div class="steps col-md-4 text-center">
-                <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 3 Image" />
-                <h3 class="heading-h3">
-                    DOWNLOAD OR
-                    <br> PRINT
-                </h3>
-                <p class="">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                </p>
-                <p><a class="btn" href="{% url 'resumetemplatedownload' %}">DOWNLOAD TEMPLATE</a></p>
+    <section>
+        <div class="container">
+            <h2 class="text-center">
+                3 EASY STEPS TO CREATE YOUR PERFECT <br />
+                RESUME
+            </h2>
+            <div class="row justify-content-center">
+                <div class="choose-templates">
+                    <div class="steps col-md-4 mb-4">
+                        <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 1 Image" class="img-fluid mb-4">
+                        <h3 class="heading-h3 text-center">
+                            CHOOSE YOUR RESUME TEMPLATE
+                        </h3>
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <div class="button text-center">
+                            <a class="btn btn-primary" href="{% url 'resume_templates' %}">CHOOSE TEMPLATES</a>
+                        </div>
+                    </div>
+                    <div class="steps col-md-4 mb-4">
+                        <img src="{% static '/images/customizeresume.jpg' %}" alt="Step 2 Image" class="img-fluid mb-4">
+                        <h3 class="heading-h3 text-center">
+                            CUSTOMIZE YOUR
+                            <br> RESUME
+                        </h3>
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <div class="button text-center">
+                            <a class="btn btn-primary" href="{% url 'resume' %}">EDIT RESUMES</a>
+                        </div>
+                    </div>
+                    <div class="steps col-md-4 mb-4">
+                        <img src="{% static '/images/chooseresume.jpg' %}" alt="Step 3 Image" class="img-fluid mb-4">
+                        <h3 class="heading-h3 text-center">
+                            DOWNLOAD OR
+                            <br> PRINT
+                        </h3>
+                        <p class="text-center">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        </p>
+                        <div class="button text-center">
+                            <a class="btn btn-primary" href="{% url 'resumetemplatedownload' %}">DOWNLOAD TEMPLATE</a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Section-7 HTML START -->
-    <section class="about-us p-4 p-md-5 mb-4" id="about-us">
-        <img src="{% static '/images/heart.png' %}" alt="heart-img">
-        <h1>Why our customers love</h1>
-        <h2>our resume builder</h2>
-        <p>Resume.io’s online builder tool and collection of elegant, recruiter-tested templates are used by more than
-            10 million people around the globe! We are incredibly proud to empower so many active professionals.
-        </p>
-        <p><a class="btn" href="{% url 'resume_templates' %}">Select Templates</a></p>
-
+    <section class="about-us mb-4 text-center" id="about-us">
+        <div class="container">
+            <img src="{% static '/images/heart.png' %}" alt="heart-img" class="img-fluid mb-4">
+            <h1>Why our customers love</h1>
+            <h2>our resume builder</h2>
+            <p>Resume.io’s online builder tool and collection of elegant, recruiter-tested templates are used by more
+                than
+                10 million people around the globe! We are incredibly proud to empower so many active professionals.
+            </p>
+            <div class="button">
+                <a class="btn btn-primary" href="{% url 'resume_templates' %}">Select Templates</a>
+            </div>
+        </div>
     </section>
-   
 
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"
+        integrity="sha384-LVFa+8h2lMzZSt2JoXI6W6f5wu+3aNE0PHQCgRvSbejG2+WAXiwe/lU3o9ZgKw4W"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-hzq0x+rqBBrGgdxJ3fWvASAxKQ3cRr/r6T8rq8k3gcJw8URbqyzF0l+2fWNcPfoH"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
